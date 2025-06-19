@@ -1,1 +1,38 @@
-<pre><code># 🧑‍💻 Mini Profile Editor – Next.js + App Router A simple profile viewer and editor app built using **Next.js App Router**, **React Hook Form**, **Zod**, **React Query**, **Zustand**, and **TailwindCSS**. Deploys seamlessly to **Vercel**. --- ## 🚀 Features - 🔒 Simulated login/logout using Zustand + localStorage - 👤 View profile (public route) - ✏️ Edit profile (private route) - ✅ Form validation with Zod + React Hook Form - 📦 Data fetching and mutation using React Query - 🌐 Server and Client components with App Router - 🎨 UI with TailwindCSS + ShadCN (Radix) components - 🔔 Toast notifications with Sonner - 💅 Responsive and accessible UI --- ## 📁 Project Structure ``` app/ ├── (public)/profile/page.tsx # Server Component – public profile view ├── (private)/edit-profile/page.tsx # Client Component – edit form ├── login/page.tsx # Login page ├── api/profile/route.ts # GET & PUT API routes lib/ ├── zustand.ts # Auth state using Zustand ├── validation.ts # Zod schema components/ ├── ProfileCard.tsx # Displays profile ├── ProfileForm.tsx # Editable form ├── LoginToggle.tsx # Login/Logout button ├── ToastListener.tsx # Zustand + Sonner bridge ``` --- ## 📦 Tech Stack - [Next.js 15+](https://nextjs.org/docs/app/building-your-application/routing) - [React 19](https://react.dev/) - [Tailwind CSS](https://tailwindcss.com/) - [Zod](https://zod.dev/) - [React Hook Form](https://react-hook-form.com/) - [React Query (TanStack)](https://tanstack.com/query) - [Zustand](https://github.com/pmndrs/zustand) - [Sonner](https://sonner.emilkowal.ski/) – for toasts - [ShadCN UI](https://ui.shadcn.com/) – built on Radix UI --- ## 🛠️ Getting Started ### 1. Clone the repo ```bash git clone https://github.com/YOUR_USERNAME/next-profile-editor.git cd next-profile-editor ``` ### 2. Install dependencies ```bash npm install ``` ### 3. Run the dev server ```bash npm run dev ``` Visit `http://localhost:3000` --- ## ✨ Demo Live URL: [https://next-profile-editor.vercel.app](https://next-profile-editor.vercel.app) *(Replace with your actual Vercel deployment URL)* --- ## 🔐 Auth Simulation No real authentication is implemented. Login is simulated with Zustand + localStorage. Routes: - `/login`: login screen - `/profile`: view your profile (protected) - `/edit-profile`: edit form (protected) --- ## ✏️ Editing Initial Profile Data Initial profile data is located in: ```ts // src/app/api/profile/route.ts let profile = { name: 'Sai Teja', bio: 'React/React Native Developer', email: 'sai@gmail.com', phone: '9999999999', location: 'Pune, India', }; ``` --- ## ✅ Deployment on Vercel 1. Push your repo to GitHub 2. Go to [https://vercel.com](https://vercel.com) 3. Import your GitHub repo 4. Click **Deploy** > No custom configuration needed — Vercel auto-detects Next.js 15+ with App Router. </code></pre>
+# 🧑‍💻 Mini Profile Editor – Next.js + App Router
+
+A simple profile viewer and editor app built using **Next.js App Router**, **React Hook Form**, **Zod**, **React Query**, **Zustand**, and **TailwindCSS**. Deploys seamlessly to **Vercel**.
+
+---
+
+## 🚀 Features
+
+- 🔒 Simulated login/logout using Zustand + localStorage  
+- 👤 View profile (public route)  
+- ✏️ Edit profile (private route)  
+- ✅ Form validation with Zod + React Hook Form  
+- 📦 Data fetching and mutation using React Query  
+- 🌐 Server and Client components with App Router  
+- 🎨 UI with TailwindCSS + ShadCN (Radix) components  
+- 🔔 Toast notifications with Sonner  
+- 💅 Responsive and accessible UI  
+
+---
+
+## 📁 Project Structure
+
+```txt
+app/
+├── (public)/profile/page.tsx         # Server Component – public profile view
+├── (private)/edit-profile/page.tsx  # Client Component – edit form
+├── login/page.tsx                   # Login page
+├── api/profile/route.ts             # GET & PUT API routes
+
+lib/
+├── zustand.ts                       # Auth state using Zustand
+├── validation.ts                    # Zod schema
+
+components/
+├── ProfileCard.tsx                  # Displays profile
+├── ProfileForm.tsx                  # Editable form
+├── LoginToggle.tsx                  # Login/Logout button
+├── ToastListener.tsx                # Zustand + Sonner bridge
